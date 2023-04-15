@@ -5,9 +5,9 @@ import { Button } from "../components/Buttons";
 
 const Body = styled.div`
   background: linear-gradient(to right, #a5bfb2, #fff);
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  position: relative;
+  position: fixed;
 `;
 
 const LandingPageContainer = styled.div`
