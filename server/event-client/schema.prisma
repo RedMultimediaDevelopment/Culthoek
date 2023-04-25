@@ -1,0 +1,43 @@
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://cultuurhoek:cultuurhoek123@cultuurhoek.cdnbhdu.mongodb.net/cultuurhoek?retryWrites=true&w=majority"
+}
+
+generator userClient {
+  provider = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+  output   = "../user-client"
+  model    = ["User"]
+}
+
+generator eventClient {
+  provider = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+  output   = "../event-client"
+  model    = ["EventTicket"]
+}
+
+
+model EventTicket {
+  id          String    @id @default(cuid()) @map("_id")
+  name        String
+  date        String
+  time        String
+  image       String
+  description String
+  price       Int
+}
+
+model User {
+  id                  String  @id @default(cuid()) @map("_id")
+  birthYear           String?
+  gender              String?
+  location            String?
+  newsLetter          Boolean?
+  isPresentLaunchParty Boolean?
+  email               String  @unique
+}
+
+
+
+
