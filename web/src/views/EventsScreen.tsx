@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Theme from "../components/themes/defaultTheme";
 
 import { Header } from "../components/Header";
-import { EventList } from "../modules/events/views/EventList";
+import { EventList } from "../modules/event/tickets/EventList";
 
 const Wrapper = styled.div`
   width: 100%;

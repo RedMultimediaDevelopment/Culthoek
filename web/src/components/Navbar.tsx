@@ -134,8 +134,8 @@ export const Navbar = () => {
 
   NavItems = (
     <>
-      <NavItem to="/">OVER ONS</NavItem>
-      <NavItem to="/events">AGENDA</NavItem>
+      <NavItem to="/">HOME</NavItem>
+      <NavItem to="/calendar">AGENDA</NavItem>
     </>
   );
 
