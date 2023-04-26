@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "../../event-client";
+import { PrismaClient, User } from "../../user-client";
 
 const prisma = new PrismaClient();
 

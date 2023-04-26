@@ -155,8 +155,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../.env",
-    "schemaEnvPath": "../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../prisma",
   "clientVersion": "4.13.0",
@@ -166,7 +165,7 @@ const config = {
   ],
   "activeProvider": "mongodb",
   "dataProxy": false,
-  "postinstall": true
+  "postinstall": false
 }
 config.dirname = dirname
 config.document = dmmf

@@ -3,10 +3,18 @@ import fastify from "fastify";
 
 import surveyRouter from "./survey/router";
 import eventTicketRouter from "./ticketing/router";
+import paymentRouter from "./modules/payment/router";
+import cors from "@fastify/cors";
 
 const app = fastify({ logger: true });
 
 app.register(surveyRouter, eventTicketRouter);
+app.register(paymentRouter);
+
+// Register the cors plugin
+app.register(cors, {
+  origin: "http://localhost:3000",
+});
 
 const setup = async () => {
   try {
